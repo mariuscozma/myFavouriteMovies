@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Movie</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png" />
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">	
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/css/movie.css">
+</head>
+    
+<body>
+
+	<div id="movie">
+
+		<div class="loader"
+			v-show=showLoader
+		>
+			<img src="http://statistiche.atlantedelleprofessioni.it/extension/atlantegrafici/design/atlantegrafici/images/loader_green.gif">
+		</div>
+
+		<div class="menu-component-container">
+			<menu-component
+				v-bind:movies="movies"
+			></menu-component>
+		</div>
+
+
+		<div class="movie-details">
+			<div class="movie-info">
+				<h1>{{movie.title}}</h1>
+				
+				<div class="detail">
+					{{movie.overview}}
+				</div>
+
+				<div class="detail release-date">
+					<p class="detail-title">Release date: </p>
+					<p class="detail-value">{{movie.release_date}}</p>
+				</div>
+
+				<div class="detail vote">
+					<p class="detail-title">Vote:</p>
+					<p class="detail-value"> {{movie.vote_average}}</p>
+				</div>
+	
+			</div>
+			<div class="movieImgContainer">
+				<img :src=imageUrl>
+			</div>
+
+			
+			<div class="related-movies-container">
+				<h3>Related movies</h3>
+				<div 
+					style="color: rgba(220, 220, 220, 0.91);font-size: 20px;"
+					v-show=genreResults
+				> 
+					<p>No result found</p>
+				</div>
+				<div class="movie-list-container">
+					<movie-list v-bind:movies="similarMovies"></movie-list>
+				</div>
+			</div>
+
+			
+		</div>
+		
+		<div class="footer">
+			<div class="footer-content-container"></div>
+		</div>
+	</div>
+	
+	
+	
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="module" src="js/movie.js"></script>
+
+</body>
+    
+</html>

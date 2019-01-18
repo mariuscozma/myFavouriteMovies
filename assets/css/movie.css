@@ -1,0 +1,202 @@
+/*LOADER CSS*/
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #161616;
+  z-index: 2;
+}
+
+.loader > img {
+  width: 100px;
+  position: fixed;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+}
+
+/*MENU CSS*/
+.menu-component-container {
+  width: 20%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.menu {
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  top: 25%;
+}
+
+.logo-container {
+  width: 100%;
+}
+
+.buttons-container {
+  width: 100%;
+}
+
+.menu-voice {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10%;
+}
+
+.menu-voice,
+.menu-voice > a {
+  color: rgba(220, 220, 220, 0.377);
+  text-decoration: none;
+}
+
+.menu-voice:hover,
+.menu-voice > a:hover {
+  color: #53d00acf;
+}
+
+/*FOOTER CSS*/
+.footer {
+  margin-top: 100px;
+  height: 250px;
+  display: block;
+  width: 100%;
+  float: right;
+}
+
+.footer-content-container {
+  background-color: #1e1e1e;
+  width: 100%;
+  height: 100%;
+}
+
+/*MOVIE DETAILS*/
+.movieImgContainer > img {
+  width: 40%;
+}
+
+.movie-details {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.movie-info {
+  float: right;
+  width: 60%;
+  display: block;
+}
+
+.movie-info > h1 {
+  margin: 0;
+  padding-left: 20px;
+  color: #53d00acf;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.detail {
+  margin-top: 35px;
+  color: white;
+  padding: 0px 20px;
+  font-size: 20px;
+}
+
+/*RELATED MOVIES*/
+.related-movies-container {
+  margin-top: 40px;
+}
+
+.related-movies-container > h3 {
+  color: rgba(220, 220, 220, 0.377);
+  font-size: 20px;
+}
+
+.movie-list-ul {
+  padding-left: 0;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.movie-li {
+  width: 30%;
+  float: left;
+}
+
+.movie-li:not(:last-child) {
+  margin-right: 5%;
+}
+
+/**/
+.detail-title {
+  color: #53d00acf;
+  margin-top: 0;
+  float: left;
+  margin-right: 10px;
+}
+
+.movies-container {
+  width: 100%;
+  position: relative;
+}
+
+.movie-description {
+  height: 40%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  background-color: #161616e3;
+  padding: 0% 2%;
+}
+
+.movie-description > h2 {
+  color: #53d00acf;
+  font-size: 20px;
+}
+
+.overview {
+  display: -webkit-box;
+  margin: 0 auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-decoration: none;
+  color: rgba(220, 220, 220, 0.377);
+}
+
+.info:hover {
+  color: white;
+}
+
+.related-not-found {
+  color: rgba(220, 220, 220, 0.91);
+  font-size: 24px;
+  text-align: center;
+}
+
+* {
+  font-family: "PT Sans", sans-serif;
+}
+
+body {
+  background-color: #161616;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*# sourceMappingURL=movie.css.map */

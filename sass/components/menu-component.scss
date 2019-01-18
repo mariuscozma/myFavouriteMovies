@@ -1,0 +1,44 @@
+/*MENU CSS*/
+
+.menu-component-container {
+    width: 20%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    top: 25%;
+}
+
+.logo-container {
+    width: 100%;
+}
+
+.buttons-container {
+    width: 100%;
+}
+
+.menu-voice {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10%;
+    
+}
+
+.menu-voice, 
+.menu-voice > a {
+    color: $menu-voice-color;
+    text-decoration: none;
+}
+
+.menu-voice:hover, 
+.menu-voice > a:hover {
+    color: $buttons-color;
+}

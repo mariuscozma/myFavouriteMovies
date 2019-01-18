@@ -1,0 +1,39 @@
+/*SORTING INPUTS CSS*/
+
+.sorting-container {
+    position: absolute;
+    width: 80%;
+    right: 0;
+}
+
+.sorting-elements{
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+    font-size: 18px;
+}
+
+.sorting-elements > p {
+    margin: 0;
+    float: left;
+    color: $menu-voice-color;
+}
+
+.sorting-buttons {
+    margin-left: 15px;
+    float: left;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+button {
+    background-color: $menu-voice-color;
+    color: $buttons-color;
+    border: #161616e3;
+    outline: none;
+    margin-left:  10px;
+    font-size: 14px;
+}

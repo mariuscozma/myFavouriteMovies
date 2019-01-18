@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png" />
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/css/home.css">
+</head>
+    
+<body>
+
+	<div id="home">
+		<div class="loader"
+			v-show=showLoader
+		>
+				<img src="http://statistiche.atlantedelleprofessioni.it/extension/atlantegrafici/design/atlantegrafici/images/loader_green.gif">
+		</div>
+		
+		<div class="sorting-container">
+			<div class="genre-displayed">
+				{{genreNameSelected}}
+				<button v-on:click="seeAllFilms">See all films</button>
+			</div>
+			<div class="sorting-elements">
+				<p>Sort by:</p>
+				<div class="sorting-buttons">
+					<button v-on:click="sortByVote">Vote <i class="fas fa-arrow-down"></i></i></button>
+					<button v-on:click="sortByReleaseDate">Release Date <i class="fas fa-arrow-down"></i></button>
+					<button v-on:click="sortByPopularity">Popularity <i class="fas fa-arrow-down"></i></button>
+				</div>
+			</div>
+			<div 
+				style="color: rgba(220, 220, 220, 0.91);font-size: 24px;text-align: center;"
+				v-show=genreResults> 
+				<p>No result found</p>
+			</div>
+		</div>
+
+		<div class="menu-component-container">
+			<menu-component 
+				v-bind:genres="genres"
+				v-bind:movies="movies"
+				v-on:menu_genre_id="filterByGenre"
+			></menu-component>
+		</div>
+
+		<div class="movie-list-container">
+			<movie-list 
+				v-bind:movies="movies"
+			></movie-list>
+		</div>
+
+		
+		<div class="footer">
+			<div class="footer-content-container"></div>
+		</div>
+		
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="module" src="js/home.js"></script>
+</body>
+    
+</html>
